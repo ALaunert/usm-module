@@ -1,23 +1,23 @@
 <?php
 
-namespace Up\Tasks\Model;
+namespace Up\USM\Model;
 
 use Bitrix\Main\Localization\Loc, Bitrix\Main\ORM\Data\DataManager, Bitrix\Main\ORM\Fields\IntegerField, Bitrix\Main\ORM\Fields\StringField, Bitrix\Main\ORM\Fields\Validators\LengthValidator;
 
 Loc::loadMessages(__FILE__);
 
 /**
- * Class TaskTable
+ * Class ReleaseTable
  *
  * Fields:
  * <ul>
  * <li> ID int mandatory
- * <li> NAME string(255) mandatory
+ * <li> NAME string(256) mandatory
  * </ul>
  *
- * @package Bitrix\Tasks
+ * @package Bitrix\Release
  **/
-class TaskTable extends DataManager
+class ReleaseTable extends DataManager
 {
 	/**
 	 * Returns DB table name for entity.
@@ -26,7 +26,7 @@ class TaskTable extends DataManager
 	 */
 	public static function getTableName()
 	{
-		return 'up_tasks_task';
+		return 'up_release';
 	}
 
 	/**
@@ -41,14 +41,14 @@ class TaskTable extends DataManager
 				'ID', [
 						'primary' => true,
 						'autocomplete' => true,
-						'title' => Loc::getMessage('TASK_ENTITY_ID_FIELD'),
+						'title' => Loc::getMessage('RELEASE_ENTITY_ID_FIELD'),
 					]
 			),
 			new StringField(
 				'NAME', [
 						  'required' => true,
 						  'validation' => [__CLASS__, 'validateName'],
-						  'title' => Loc::getMessage('TASK_ENTITY_NAME_FIELD'),
+						  'title' => Loc::getMessage('RELEASE_ENTITY_NAME_FIELD'),
 					  ]
 			),
 		];
@@ -62,7 +62,7 @@ class TaskTable extends DataManager
 	public static function validateName()
 	{
 		return [
-			new LengthValidator(null, 255),
+			new LengthValidator(null, 256),
 		];
 	}
 }
