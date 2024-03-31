@@ -25,8 +25,8 @@ class TaskListComponent extends CBitrixComponent
 
 	protected function fetchTaskList(): void
 	{
-		$data = \Up\Tasks\TaskManager\Task::getTasksList();
-		$this->arResult['TASKS'] = $data;
+		// $data = \Up\Tasks\TaskManager\Task::getTasksList();
+		// $this->arResult['TASKS'] = $data;
 	}
 
 }
