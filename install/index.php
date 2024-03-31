@@ -5,9 +5,15 @@ use Bitrix\Main\ModuleManager;
 
 Loc::loadMessages(__FILE__);
 
+<<<<<<< HEAD
 class up_tasks extends CModule
 {
 	public $MODULE_ID = 'up.tasks';
+=======
+class up_usm extends CModule
+{
+	public $MODULE_ID = 'up.usm';
+>>>>>>> 48e2275 (fixed extends problem with controller classes, added .settings.php)
 	public $MODULE_VERSION;
 	public $MODULE_VERSION_DATE;
 	public $MODULE_NAME;
@@ -51,7 +57,11 @@ class up_tasks extends CModule
 	{
 		global $DB;
 
+<<<<<<< HEAD
 		$DB->RunSQLBatch($_SERVER['DOCUMENT_ROOT'] . '/local/modules/up.tasks/install/db/install.sql');
+=======
+		$DB->RunSQLBatch($_SERVER['DOCUMENT_ROOT'] . '/local/modules/up.usm/install/db/install.sql');
+>>>>>>> 48e2275 (fixed extends problem with controller classes, added .settings.php)
 
 		ModuleManager::registerModule($this->MODULE_ID);
 	}
@@ -59,21 +69,33 @@ class up_tasks extends CModule
 	public function installFiles(): void
 	{
 		CopyDirFiles(
+<<<<<<< HEAD
 			$_SERVER['DOCUMENT_ROOT'] . '/local/modules/up.tasks/install/components',
+=======
+			$_SERVER['DOCUMENT_ROOT'] . '/local/modules/up.usm/install/components',
+>>>>>>> 48e2275 (fixed extends problem with controller classes, added .settings.php)
 			$_SERVER['DOCUMENT_ROOT'] . '/local/components/',
 			true,
 			true
 		);
 
 		CopyDirFiles(
+<<<<<<< HEAD
 			$_SERVER['DOCUMENT_ROOT'] . '/local/modules/up.tasks/install/templates',
+=======
+			$_SERVER['DOCUMENT_ROOT'] . '/local/modules/up.usm/install/templates',
+>>>>>>> 48e2275 (fixed extends problem with controller classes, added .settings.php)
 			$_SERVER['DOCUMENT_ROOT'] . '/local/templates/',
 			true,
 			true
 		);
 
 		CopyDirFiles(
+<<<<<<< HEAD
 			$_SERVER['DOCUMENT_ROOT'] . '/local/modules/up.tasks/install/routes',
+=======
+			$_SERVER['DOCUMENT_ROOT'] . '/local/modules/up.usm/install/routes',
+>>>>>>> 48e2275 (fixed extends problem with controller classes, added .settings.php)
 			$_SERVER['DOCUMENT_ROOT'] . '/local/routes/',
 			true,
 			true
@@ -118,7 +140,11 @@ class up_tasks extends CModule
 	{
 		global $DB;
 
+<<<<<<< HEAD
 		$DB->RunSQLBatch($_SERVER['DOCUMENT_ROOT'] . '/local/modules/up.tasks/install/db/uninstall.sql');
+=======
+		$DB->RunSQLBatch($_SERVER['DOCUMENT_ROOT'] . '/local/modules/up.usm/install/db/uninstall.sql');
+>>>>>>> 48e2275 (fixed extends problem with controller classes, added .settings.php)
 
 		ModuleManager::unRegisterModule($this->MODULE_ID);
 	}
