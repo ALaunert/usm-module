@@ -1,0 +1,26 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+.delete-task-form {
+
+	margin-left: auto;
+}
+
+.task-input {
+	width: 100%;
+}
+
+.delete-btn {
+	background-color: inherit;
+	border: none;
+	cursor: pointer;
+}
+
+.alert-danger {
+	border-color: red;
+
+}
+
+.alert-danger::placeholder {
+	color: red;
+	opacity: 0.75;
+}
