@@ -7,7 +7,7 @@ use Bitrix\Main\Localization\Loc, Bitrix\Main\ORM\Data\DataManager, Bitrix\Main\
 Loc::loadMessages(__FILE__);
 
 /**
- * Class StoryMapTable
+ * Class UserStoryMapTable
  *
  * Fields:
  * <ul>
@@ -16,7 +16,7 @@ Loc::loadMessages(__FILE__);
  *
  * @package Bitrix\User
  **/
-class StoryMapTable extends DataManager
+class UserStoryMapTable extends DataManager
 {
 	/**
 	 * Returns DB table name for entity.
